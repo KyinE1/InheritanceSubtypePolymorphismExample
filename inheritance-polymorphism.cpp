@@ -1,9 +1,3 @@
-/*
-	inheritance-polymorphism.cpp
-	Date Written: 4/22
-	Created by: Kyin Edwards
-*/
-
 #include <iomanip>
 #include <vector>
 #include "shape.h"
@@ -11,15 +5,10 @@
 #include "rectangle.h"
 #include "triangle.h"
 
-/* Driver program for shape class hierarchy */
+/** Driver code for shape class hierarchy. */
 int main() {
-	
-	// std::cout << std::fixed << std::setprecision(2);
-	
-	// create vector shapes
 	std::vector<shape*> shapes;
-	
-	// initialize vector with shapes (objects)
+
 	shapes.push_back(new circle("Red", 360.00));
 	shapes.push_back(new circle("Orange", 180.00));
 	shapes.push_back(new rectangle("Green", 48.00, 36.00));
@@ -43,7 +32,6 @@ int main() {
 	
 	std::cout << "\n";
 	
-	// empty memory stored in vector
 	for (size_t i = 0; i < shapes.size(); i++)
 		shapes.pop_back();
 	
